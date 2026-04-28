@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="jogo.css">
+</head>
+
+<body>
+    <h1>🌱 PROGRAMAÇÃO AGROFLORESTAL 🌱</h1>
+
+    <p class="subtitulo">
+        Planeje o algoritmo do seu Sistema Agroflorestal antes de executar as ações no tabuleiro físico!
+    </p>
+
+    <div class="container">
+
+
+        <div class="painel">
+
+            <h2>function algoritmoSistemaFlorestal () {</h2>
+
+            <div class="algoritmo">
+
+
+                <div class="linha" id="linha0">
+
+                    <div class="rodada">
+                        let Rodada 1
+                    </div>
+
+                    <select id="acao0">
+                        <option value="Plantar">🌱 Plantar</option>
+                        <option value="Integrar">👩‍🌾 Integrar</option>
+                    </select>
+
+                    <select id="carta0">
+                        <option value="Milho">🌽 Milho</option>
+                        <option value="Soja">🫘 Soja</option>
+                        <option value="Árvore">🌳 Árvore</option>
+                        <option value="Vaca">🐄 Vaca</option>
+                        <option value="Galinha">🐔 Galinha</option>
+                    </select>
+
+                </div>
+
+
+                <div class="linha" id="linha1">
+
+                    <div class="rodada">
+                        let Rodada 2
+                    </div>
+
+                    <select id="acao1">
+                        <option value="Plantar">🌱 Plantar</option>
+                        <option value="Integrar">👩‍🌾 Integrar</option>
+                    </select>
+
+                    <select id="carta1">
+                        <option value="Milho">🌽 Milho</option>
+                        <option value="Soja">🫘 Soja</option>
+                        <option value="Árvore">🌳 Árvore</option>
+                        <option value="Vaca">🐄 Vaca</option>
+                        <option value="Galinha">🐔 Galinha</option>
+                    </select>
+
+                </div>
+
+
+                <div class="linha" id="linha2">
+
+                    <div class="rodada">
+                        let Rodada 3
+                    </div>
+
+                    <select id="acao2">
+                        <option value="Plantar">🌱 Plantar</option>
+                        <option value="Integrar">👩‍🌾 Integrar</option>
+                    </select>
+
+                    <select id="carta2">
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <div class="botoes-geral">
+                <div class="botao-confirmar" id="botao-confirmar">
+                    <button class="confirmar" id="confirmar">
+                        ✔ Confirmar Algoritmo
+                    </button>
+                </div>
+
+                <div class="botoes-jogo" id="botoes-jogo">
+                    <button id="executar" class="executar invisivel">
+                        ▶ Executar Próxima Linha
+                    </button>
+
+                    <button id="debug" class="debug invisivel">
+                        🛠 Debug
+                    </button>
+
+                    <button id="reiniciar" class="reset invisivel">
+                        🔄 Reiniciar
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        
+        <div class="console" id="console">
+
+            <h2 class="console-sub">Console do Sistema</h2>
+
+            <div class="console-saida piscando" id="saida">
+
+                > Sistema Agroflorestal iniciado...<br>
+                > Aguardando programação...<br><br>
+
+            </div>
+            
+        </div>
+    
+    </div>
+
+
+    <script src="jogo.js"></script>
+</body>
+
+</html>

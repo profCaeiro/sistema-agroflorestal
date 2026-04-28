@@ -1,0 +1,184 @@
+   html{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Tahoma;
+    }
+
+    body{
+      background:#eef5ec;
+      padding:30px;
+      color:#222;
+    }
+
+    h1{
+      text-align:center;
+      color:#2f6b3d;
+      margin-bottom:10px;
+    }
+
+    .subtitulo{
+      text-align:center;
+      margin-bottom:30px;
+      color:#555;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+      display:grid;
+      grid-template-columns: 1fr 350px;
+      gap:20px;
+    }
+
+    .painel{
+      background:white;
+      border-radius:16px;
+      padding:25px;
+      box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .painel h2{
+      margin-bottom:20px;
+      color:#2f6b3d;
+    }
+
+    .algoritmo{
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .linha{
+      display:grid;
+      grid-template-columns: 120px 1fr 1fr;
+      gap:10px;
+      align-items:center;
+      padding:10px;
+      border-radius:10px;
+      background:#f4faf3;
+    }
+
+    .linha.executando{
+      border:2px solid #2f8f46;
+      background:#dff3df;
+    }
+
+    .rodada{
+      font-weight:bold;
+      color:#2f6b3d;
+    }
+
+    select{
+      padding:10px;
+      border-radius:8px;
+      border:1px solid #ccc;
+      font-size:15px;
+    }
+
+    .botoes-geral{
+      display:flex;
+      gap:10px;
+      margin-top:25px;
+      flex-wrap:wrap;
+    }
+
+    button{
+      border:none;
+      padding:12px 18px;
+      border-radius:10px;
+      cursor:pointer;
+      font-weight:bold;
+      transition:0.2s;
+    }
+
+    .invisivel{
+      content: none;
+    }
+
+    .executar{
+      background:#2f8f46;
+      color:white;
+    }
+
+    .executar:hover{
+      background:#236735;
+    }
+
+    .debug{
+      background:#f0ad4e;
+      color:white;
+    }
+
+    .debug:hover{
+      background:#d99638;
+    }
+
+    .reset{
+      background:#d9534f;
+      color:white;
+    }
+
+    .reset:hover{
+      background:#b93e3a;
+    }
+
+    .console{
+      background:#111;
+      color: #00ff66;
+      border-radius:12px;
+      padding:15px;
+      height:500px;
+      overflow-y:auto;
+      font-family:monospace;
+      line-height:1.6;
+    }
+
+    .saida{
+      overflow-y: auto;
+    }
+
+    .console-saida > h2 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .console-sub{
+      margin-bottom:15px;
+      text-align: center;
+    }
+
+    .evento{
+      color:#ff6b6b;
+      font-weight:bold;
+    }
+
+    .sucesso{
+      color:#8aff8a;
+    }
+
+    .alerta{
+      color:#ffe66d;
+    }
+
+    .piscando{
+
+    animation: piscar 1s infinite;
+
+}
+
+@keyframes piscar{
+
+    0%{
+        opacity: 1;
+    }
+
+    50%{
+        opacity: 0.2;
+    }
+
+    100%{
+        opacity: 1;
+    }
+
+}
