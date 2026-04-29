@@ -66,10 +66,14 @@ function confirmarAlgoritmo() {
 
         
         for (let i = 0; i < 3; i++) {
+            const selectAcao = document.getElementById("acao" + i)
+            selectAcao.disabled = true
+            const selectCarta = document.getElementById("carta" + i)
+            selectCarta.disabled = true
 
-            document.getElementById("acao" + i).disabled = true
+            selectAcao.classList.add("cursor-proibido")
+            selectCarta.classList.add("cursor-proibido")
 
-            document.getElementById("carta" + i).disabled = true
 
         }
 
@@ -80,6 +84,10 @@ function confirmarAlgoritmo() {
 
         containerBtnsJogo.style.display = "flex"
 
+        
+
+        
+
     }
 
 }
@@ -88,7 +96,7 @@ function confirmarAlgoritmo() {
 
 function executarLinha() {
     if (rodadaAtual >= 3) {
-        log("<br>Algoritmo finalizado. Realize o debug.","alerta")
+        log("<br> ⚠️ Realize o debug ⚠️","alerta")
         return
     }
 
@@ -102,19 +110,21 @@ function executarLinha() {
 
     const carta = document.getElementById("carta" + rodadaAtual).value
 
-    log("<br>Executando Linha " + (rodadaAtual + 1), "sucesso")
+    log("<br><br><br> > Executando Linha " + (rodadaAtual + 1), "sucesso")
 
     log("<h2>" + acao + " → " + carta + "</h2>")
 
-    log("Realize a ação no tabuleiro físico.")
+    log("⚠️ Realize a ação no tabuleiro físico ⚠️", "alerta")
 
     
     if (rodadaAtual === 2) {
-
-        log("<br><h2>🔥🔥🔥🔥🔥🔥🔥🔥</h2><br> Evento Ambiental: Revelem o Desastre Ambiental!",
+        setTimeout(() => { log("<br><h2>🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨</h2><br> <h3>DESASTRE AMBIENTAL! </h3>",
             "evento")
 
-        log("Espero que não tenha sido tão ruim...")
+        log("Leia a carta e todos aplicarão o efeito aos seus Sistemas Agroflorestais!", "evento")
+            
+        }, 1000);
+        
     }
 
     rodadaAtual++
@@ -131,13 +141,18 @@ function debugar() {
         algoritmoConfirmado = false
 
         for (let i = 0; i < 3; i++) {
-            document.getElementById("acao" + i).disabled = false
-            document.getElementById("carta" + i).disabled = false
+        const selectCarta = document.getElementById("carta" + i)
+        const selectAcao = document.getElementById("acao" + i)
+        selectAcao.disabled = false
+        selectCarta.disabled = false
+        selectAcao.classList.remove("cursor-proibido")
+        selectCarta.classList.remove("cursor-proibido")
         }
 
         rodadaAtual = 0
         containerBtnsJogo.style.display = "none"
         containerBtnConfirmar.style.display = "flex"
+       
         limparExecucao()
 
     }
@@ -155,9 +170,14 @@ function reiniciar() {
     limparExecucao()
 
    
-    for (let i = 0; i < 3; i++) {
-        document.getElementById("acao" + i).disabled = false
-        document.getElementById("carta" + i).disabled = false
+    for (let i = 0; i < 3; i++) { 
+        const selectCarta = document.getElementById("carta" + i)
+        const selectAcao = document.getElementById("acao" + i)
+        selectAcao.disabled = false
+        selectCarta.disabled = false
+        selectAcao.classList.remove("cursor-proibido")
+        selectCarta.classList.remove("cursor-proibido")
+
     }
 
   

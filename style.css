@@ -1,24 +1,29 @@
+html{
+    height: 100vh;
+    width: 100vw;
+}
+
 body{
     background-image: url('img/background-index.png');
     background-size: cover;
     background-repeat:no-repeat;
     font-family: 'Press Start 2P', monospace;
     margin-top: 30px;
+    height: 95vh;
+
 }
 
 *{
     margin:0;
     padding:0;
+    
 }
 
 .container{
     flex-direction:column;
-    align-items:center;
     gap:35px;
     display:flex;
     justify-content:center;
-    align-items:center;
-
 }
 
 .placa{
@@ -32,6 +37,7 @@ body{
 .placa-titulo {
     padding:35px;
     width:750px;
+    align-self: center;
 }
 
 .placa-titulo h1{
@@ -50,11 +56,16 @@ body{
 
 .inferior {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: end;
+    height: 70vh;
+   
 }
 
 .placa-tutorial{
     padding: 20px;
+    display: flex;
+    flex-direction: column;
 }
 
 
