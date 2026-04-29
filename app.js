@@ -1,5 +1,5 @@
 const iniciarBtn = document.getElementById("botao-jogar")
 
 iniciarBtn.addEventListener('click', () =>{
-    location.href = 'teste.html'
+    location.href = '/index/jogo.html'
 })
