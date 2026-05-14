@@ -4,54 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema Agroflorestal - Home Page</title>
+    <title>Sistema Agroflorestal</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hacker.css">
     <link rel="icon" href="img/favicon.png" type="image/png">
 </head>
 
 <body>
     <main class="container">
-        <div class="placa placa-titulo">
+        <div class="titulo">
+            <img src="img/logo.png" alt="" class="logo">
+            <h1 class="titulo-texto">SISTEMA AGROFLORESTAL</h1>
+            <img src="img/logo.png" alt="" class="logo">
+        </div>
 
-            <h1>
-                🌱 SISTEMA AGROFLORESTAL 🌳
-            </h1>
+        <div class="mensagem" id="mensagem">
+            <p class="instrucoes" id="instrucoes">Cultive escolhas. Colha consequências</p>
+            <p class="instrucoes-dois" id="instrucoes-dois"></p>
+            <p class="instrucoes-tres" id="instrucoes-tres"></p>
+        </div>
 
-            <p class="subtitulo"> Planeje algoritmos, desenvolva sua Agrofloresta e
-                enfrente desafios ambientais </p>
 
-            </div>
+        <div class="botoes" id="botoes">
+            <button id="iniciar" class="iniciar">
+                ▶ Iniciar
+            </button>
 
-       
-        <div class="inferior">
-            <div class="placa placa-tutorial">
-                <h2>
-                    🌽 Etapas:
-                </h2>
+            <button id="confirmar" class="confirmar">
+                ✔ Confirmar
+            </button>
 
-                <ul>
-                    <li> Planeje um Algoritmo </li>
-
-                    <li> Execute o SEU Algoritmo </li>
-
-                    <li> Monte sua Agrofloresta <br> no tabuleiro </li>
-
-                    <li> Faça DEBUG das estratégias </li>
-
-                    <li> Acumule Indicadores </li>
-                </ul>
-            </div>
-
-                <button id="botao-jogar" class="botao-jogar"> 🌱 INICIAR JOGO </button>
-
+            <p class="carregando piscando" id="carregando">CARREGANDO...</p>
         </div>
 
     </main>
 
 
 
-    <script src="app.js"></script>
+
+    <script src="hacker.js"></script>
 </body>
 
 </html>

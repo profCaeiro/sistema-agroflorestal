@@ -11,13 +11,11 @@ const debugBtn = document.getElementById("debug")
 const containerBtnsJogo = document.getElementById("botoes-jogo")
 const containerBtnConfirmar = document.getElementById("botao-confirmar")
 
-const plantas = ["🌽 Milho", "🫘 Soja", "🌳 Árvore"]
-const animais = ["🐄 Vaca","🐔 Galinha"]
+const plantas = ["🌽 Milho", "🫘 Soja", "🌾 Arroz" , "🥔 Batata"]
+const animais = ["🐄 Vaca","🐔 Galinha", "🐖 Porco"]
+const arvores = ["🌳 Goiabeira", "🌲 Embaúba", "🥜 Castanheira", "🪵 Eucalipto", "🌿 Acácia"]
 
 let algoritmoConfirmado = false
-
-
-
 containerBtnsJogo.style.display = "none"
 
 
@@ -25,7 +23,7 @@ containerBtnsJogo.style.display = "none"
 function log(texto, classe = "") {
     saida.innerHTML += "<div class=" + classe +">" + texto + "</div>"
 
-    consoleDiv.scrollTop = consoleDiv.scrollHeight
+    saida.scrollTop = saida.scrollHeight
 
 }
 
@@ -34,23 +32,25 @@ function log(texto, classe = "") {
 function atualizarCartas(indice) {
 
     const acao = document.getElementById("acao" + indice)
-
     const carta = document.getElementById("carta" + indice)
 
     
     carta.innerHTML = ""
 
    
-    if (acao.value === "Plantar") {
+    if (acao.value === "Cultivar") {
         for (let i = 0; i < plantas.length; i++) {
             carta.innerHTML += "<option value=" + plantas[i] + ">" + plantas[i] + "</option>"
         }
 
-    }  else {
+    }  else if (acao.value === "Integrar") {
         for (let i = 0; i < animais.length; i++) {
             carta.innerHTML += "<option value=" + animais[i] + ">" + animais[i] + "</option>"
         }
-    }
+    } else {
+        for (let i = 0; i < arvores.length; i++) {
+            carta.innerHTML += "<option value=" + arvores[i] + ">" + arvores[i] + "</option>"
+    } }
 
 }
 
@@ -77,7 +77,7 @@ function confirmarAlgoritmo() {
 
         }
 
-        log("✔ Algoritmo confirmado.", "sucesso")
+        log("<br><br>✔ Algoritmo confirmado.", "sucesso")
 
         
         containerBtnConfirmar.style.display = "none"
@@ -98,7 +98,7 @@ function executarLinha() {
     if (rodadaAtual >= 3) {
         log("<br> ⚠️ Realize o debug ⚠️","alerta")
         return
-    }
+    } else {
 
     limparExecucao()
 
@@ -114,14 +114,14 @@ function executarLinha() {
 
     log("<h2>" + acao + " → " + carta + "</h2>")
 
-    log("⚠️ Realize a ação no tabuleiro físico ⚠️", "alerta")
-
+    log("⚠️ Realize a ação no tabuleiro físico ⚠️", "aviso")
+    }
     
     if (rodadaAtual === 2) {
-        setTimeout(() => { log("<br><h2>🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨</h2><br> <h3>DESASTRE AMBIENTAL! </h3>",
+        setTimeout(() => { log("<br><h2>🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨🚨</h2><br> <h3> > DESASTRE AMBIENTAL! </h3>",
             "evento")
 
-        log("Leia a carta e todos aplicarão o efeito aos seus Sistemas Agroflorestais!", "evento")
+        log("<br> >> Leia a carta e todos aplicarão o efeito aos seus Sistemas Agroflorestais!", "evento")
             
         }, 1000);
         
@@ -135,8 +135,8 @@ function executarLinha() {
 
 function debugar() {
     if (rodadaAtual == 3) {
-        log("<br><h2> 🛠 Modo DEBUG liberado </h2>", "alerta")
-        log("Altere o algoritmo para as próximas rodadas")
+        log("<br><br><h2> 🛠 Modo DEBUG liberado </h2>", "alerta")
+        log(" >> Altere o algoritmo para as próximas rodadas", "alerta")
 
         algoritmoConfirmado = false
 
@@ -158,18 +158,22 @@ function debugar() {
     }
 
     else {
-        log("🛠 NÃO é possível realizar o debug!","alerta")
+        log("<br>🛠 NÃO é possível realizar o debug! Ele será liberado a cada três rodadas","alerta")
     }
 }
 
 
 
 function reiniciar() {
+
+    const confirmar = confirm("Tem certeza que deseja reiniciar? Todo o progresso será perdido")
+
+    if (confirmar) {
+
     rodadaAtual = 0
     algoritmoConfirmado = false
     limparExecucao()
 
-   
     for (let i = 0; i < 3; i++) { 
         const selectCarta = document.getElementById("carta" + i)
         const selectAcao = document.getElementById("acao" + i)
@@ -177,16 +181,13 @@ function reiniciar() {
         selectCarta.disabled = false
         selectAcao.classList.remove("cursor-proibido")
         selectCarta.classList.remove("cursor-proibido")
-
     }
-
   
     containerBtnConfirmar.style.display = "flex"
     containerBtnsJogo.style.display = "none"
+    saida.innerHTML = "> Sistema Reiniciado<br>" + ">> Aguardando programação...<br><br>"
 
-    saida.innerHTML = "Sistema Reiniciado<br>" + "Aguardando programação...<br><br>"
-
-}
+}}
 
 
 function limparExecucao() {

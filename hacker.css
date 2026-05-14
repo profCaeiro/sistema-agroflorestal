@@ -1,0 +1,131 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html, body{
+    height:100vh;
+    overflow:hidden;
+}
+
+
+body{
+    display:flex;
+    flex-direction:column;
+    color: #32c40e; 
+    background-image:url('img/tela-computador.png');
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+
+    font-family:'Press Start 2P', monospace;
+
+    padding:20px;
+}
+
+
+.container{
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    height:95%;
+    margin-top: 15px;
+}
+
+
+.titulo{
+    display: flex;
+    padding:20px;
+    width:100%;
+    max-width:850px;
+}
+
+
+.titulo > h1{
+    margin-bottom:10px;
+    text-shadow:3px 3px #196d03;
+    text-align: center;
+    font-size: 36px;
+}
+
+
+.mensagem{
+    text-align: center;
+    width: 90%;
+    height: 50%;
+}
+
+
+.mensagem > p{
+font-size: 20px;
+}
+
+.subtitulo {
+    text-align: center;
+    font-size: 24px;
+}
+
+
+.amarelo {
+    color: yellow
+}
+
+
+.vermelho {
+    color: red;
+}
+
+
+.verde {
+    color: #32c40e;
+}
+
+
+.botoes{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 45px;
+}
+
+
+.botoes > p {
+    margin-top: 135px;
+    font-size: 20px;
+}
+
+button {
+    margin: 135px;
+    background: none;
+    color: #32c40e;
+    border: none;
+    font-family:'Press Start 2P', monospace;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+
+button:hover {
+    transform: scale(1.5);
+}
+
+
+.logo {
+    height: 100px;
+    width: 100px;
+}
+
+.piscando{
+  animation:piscar 1s infinite;
+}
+
+@keyframes piscar{
+
+  0%{opacity:1;}
+  50%{opacity:0.2;}
+  100%{opacity:1;}
+
+}
+
