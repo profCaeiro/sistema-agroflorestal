@@ -63,7 +63,7 @@ h1{
 
 }
 
-.painel h2{
+.painel > h2{
   margin-bottom:10px;
 }
 
@@ -112,6 +112,10 @@ select{
   cursor:pointer;
   background:linear-gradient(180deg, #ac7835, #4d2711);
   color:#f5d6a0;
+}
+
+select > option {
+  background:linear-gradient(180deg, #ac7835, #4d2711);
 }
 
 
