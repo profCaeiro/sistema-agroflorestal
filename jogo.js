@@ -153,16 +153,21 @@ function debugar() {
         atualizarRodadas(2)
 
         if (debugs == debugsMax) {
-        log("<br><br><br><h2> > Parabéns! Você terminou de programar o seu Sistema Agroflorestal </h2>", "sucesso")
+        log("<br><br><br><h2>♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️♻️ </h2>")
+        log("<br><br><h2> > Parabéns! Você terminou de programar o seu Sistema Agroflorestal </h2>")
+        log("<br><br> >> Não se esqueça de aplicar os efeitos de fimDoJogo! Eles podem garantir a sua vitória!", "sucesso")
         log("<br><br> >> Chegou o momento de contar os seus INDICADORES e comparar com os dos outros jogadores!", "sucesso")
         log("<br><br> > ATENÇÃO:", "evento") 
         log (">>> função Limite_Producao() {" +
         "<br><br> Producao_Maxima = minimo(Producao,(Solo + Biodiversidade))}" +
         "<br><br><br>Isso é: o máximo de indicadores de Produção é igual a SOMA dos indicadores de Solo e Biodiversidade", "alerta")
         saida.classList.remove("piscando")
+        containerBtnsJogo.style.display = "none"
+        containerBtnConfirmar.style.display = "none"
         }
         debugs += 1
         rodadaAtual = 0
+       
     }
 
     else {

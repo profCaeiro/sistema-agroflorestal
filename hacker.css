@@ -85,15 +85,21 @@ font-size: 20px;
 
 .botoes{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: flex-end;
     gap: 45px;
 }
 
 
-.botoes > p {
+.carregando {
     margin-top: 135px;
     font-size: 20px;
+}
+
+.ciebp {
+    margin-top: 135px;
+    font-size: 6px;
+    color: #d30fb5;
 }
 
 button {
